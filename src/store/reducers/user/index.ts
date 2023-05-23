@@ -1,7 +1,7 @@
 import IStoreAction from "../../../types/store/actions";
 
 const initialState = {
-    apiKey: import.meta.env.DEV ? import.meta.env.VITE_API_SPORTS_KEY : '',
+    apiKey: process.env.DEV ? process.env.VITE_API_SPORTS_KEY : '',
 }
 
 const user = (state = initialState, action: IStoreAction) => {

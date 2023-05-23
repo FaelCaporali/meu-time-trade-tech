@@ -6,7 +6,7 @@ import Routes from './components/App.Routes';
 function App() {
 
   return (
-    <BrowserRouter basename={import.meta.env.DEV ? '/' : import.meta.env.BASE_URL}>
+    <BrowserRouter basename={process.env.DEV ? '/' : process.env.BASE_URL}>
       <Container>
         <Navbar>
           {/* <Login-logout /> */}

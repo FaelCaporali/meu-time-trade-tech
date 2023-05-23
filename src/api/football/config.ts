@@ -1,4 +1,4 @@
-const devKey = import.meta.env.DEV ? import.meta.env.VITE_API_SPORTS_KEY : '';
+const devKey = process.env.DEV ? process.env.VITE_API_SPORTS_KEY : '';
 const basicEndpoint = 'status';
 
 export default function footballConfig (endpoint: string = basicEndpoint, key: string = devKey) {
