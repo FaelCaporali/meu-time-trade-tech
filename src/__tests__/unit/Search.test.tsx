@@ -22,6 +22,7 @@ describe('Testes da tela de busca', () => {
 
         test('Testa se elementos se tornam interativos em ordem correta', async () => {
             const wrapper = renderWithRouterAndStore(<Search />);
+
             const country = await screen.findByLabelText('Selecione o país');
             const season = await screen.findByLabelText('Selecione a temporada');
             const league = await screen.findByLabelText('Selecione o campeonato');
