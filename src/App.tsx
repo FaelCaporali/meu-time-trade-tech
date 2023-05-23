@@ -1,6 +1,6 @@
-import { BrowserRouter } from 'react-router-dom'
-import { Container, Navbar } from 'react-bootstrap'
-import Routes from './components/App.Routes'
+import { BrowserRouter } from 'react-router-dom';
+import { Container, Navbar } from 'react-bootstrap';
+import Routes from './components/App.Routes';
 // import { Link } from 'react-router-dom'
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         </Container>
       </Container>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 function Auth() {
   return (
     <div>Auth</div>
-  )
+  );
 }
 
-export default Auth
+export default Auth;
