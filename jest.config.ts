@@ -13,7 +13,8 @@ const config: Config = {
         '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
     },
     testMatch: ['**/__tests__/**/*.test.(ts|tsx)'],
-    setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
+    setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+    
 }
 
 export default config
