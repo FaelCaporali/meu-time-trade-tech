@@ -1,22 +1,16 @@
 import { useState } from "react";
-import { Container, FormLabel, FormSelect } from "react-bootstrap";
-// import { useStore } from "react-redux";
+import { Container } from "react-bootstrap";
+import { useStore } from "react-redux";
+import { RootState } from '../store';
+import SelectInput from "../components/SelectInput";
 
 function Search() {
-  // const store = useStore();
-  const [country, setCountry] = useState('');
+  const store = useStore<RootState>();
+  const state = (store.getState());
 
   return (
     <Container>
-      <FormLabel>Selecione o país
-        <FormSelect value={country} onChange={(e) => setCountry(e.target.value)}>
-          {/* {store.getState()
-          .countries.map((country) => (
-            <option key={country.name} value={country.name}>{country.name}</option>
-          ))
-          } */}
-        </FormSelect>
-      </FormLabel>
+      <SelectInput field="country" options={state.countries.length ? state.countries : ['Por favor, aguarde...']} disabled={false}/>
     </Container>
   );
 }
