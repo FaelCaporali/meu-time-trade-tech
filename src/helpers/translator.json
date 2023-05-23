@@ -1,0 +1,8 @@
+{
+    "inputFields": {
+        "country": "o país",
+        "season": "a temporada",
+        "league": "o campeonato",
+        "team": "o time"
+    }
+}
