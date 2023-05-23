@@ -1,5 +1,4 @@
-export default interface APIConfig {
-    method: string;
+export default interface IAPIConfig {
     url: string;
     headers: {
         'x-apisports-key': string;

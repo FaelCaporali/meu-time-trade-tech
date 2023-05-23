@@ -1,7 +1,7 @@
 import axios from "axios";
-import APIConfig from "../types/api/config";
+import IAPIConfig from "../types/api/config";
 
-export default async function fetcher (config: APIConfig) {
+export default async function fetcher (config: IAPIConfig) {
     const response = await axios.get(config.url, {
         headers: config.headers,
     });
