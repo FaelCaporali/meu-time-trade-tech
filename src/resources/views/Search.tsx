@@ -13,10 +13,12 @@ import {
   setSeason,
   setTeam
 } from "../../store/slices/filters";
+import { useNavigate } from 'react-router-dom'
 
 function Search() {
   const store = useStore<RootState>();
-  const state = (store.getState());
+  const state = store.getState();
+  const redirect = useNavigate();
 
   return (
     <>
@@ -80,6 +82,8 @@ function Search() {
         onClick={() => {
           // make request
           clearFilters();
+          redirect('/results');
+
         }}
         variant="secondary"
         size="sm"
