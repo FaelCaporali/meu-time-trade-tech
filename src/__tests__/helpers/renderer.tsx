@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
-import rootReducer from '../../store/reducers';
+import rootReducer from '../../store/slices';
 
 interface RenderWithRouterAndStoreOptions {
   initialState?: any;
