@@ -20,29 +20,35 @@ export const filtersSlice = createSlice({
   initialState,
   reducers: {
     setCountry: (state, action: PayloadAction<string>) => {
-      state.filters.country = action.payload;
+      state.country = action.payload;
     },
     clearCountry: (state) => {
-      state.filters.country = undefined;
+      state.country = undefined;
     },
     setSeason: (state, action: PayloadAction<number>) => {
-      state.filters.season = action.payload;
+      state.season = action.payload;
     },
     clearSeason: (state) => {
-      state.filters.season = undefined;
+      state.season = undefined;
     },
     setLeague: (state, action: PayloadAction<string>) => {
-      state.filters.league = action.payload;
+      state.league = action.payload;
     },
     clearLeague: (state) => {
-      state.filters.league = undefined;
+      state.league = undefined;
     },
     setTeam: (state, action: PayloadAction<string>) => {
-      state.filters.team = action.payload;
+      state.team = action.payload;
     },
     clearTeam: (state) => {
-      state.filters.team = undefined;
+      state.team = undefined;
     },
+    clearFilters: (state) => {
+      state.country = undefined;
+      state.season = undefined;
+      state.league = undefined;
+      state.team = undefined;
+    }
   }
 })
 
@@ -54,7 +60,8 @@ export const {
   setLeague,
   clearLeague,
   setTeam,
-  clearTeam
+  clearTeam,
+  clearFilters
 } = filtersSlice.actions;
 
 export const selectFilters = (state: RootState) => state.filters;

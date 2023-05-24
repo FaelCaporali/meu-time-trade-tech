@@ -49,7 +49,7 @@ interface ITeamStats {
     teamId: number;
     name: string;
     season: number;
-    league: number;
+    league: string;
     players: IPlayer[];
     lineUp: {
         formation: string;
