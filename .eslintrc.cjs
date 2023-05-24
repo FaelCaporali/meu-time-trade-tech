@@ -7,7 +7,7 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-  plugins: ['react-refresh'],
+  plugins: ['react-refresh', '@typescript-eslint'],
   rules: {
     'react-refresh/only-export-components': 'warn',
     'react/react-in-jsx-scope': 'off',
@@ -18,11 +18,12 @@ module.exports = {
           "delimiter": "semi",
           "requireLast": true
         },
-          "singleline": {
-            "delimiter": "semi",
-            "requireLast": false
+        "singleline": {
+          "delimiter": "semi",
+          "requireLast": false
         }
       },
     ],
+    "indent": ["error", 2],
   },
 }

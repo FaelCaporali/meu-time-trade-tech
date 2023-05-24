@@ -1,12 +1,18 @@
 import { combineReducers } from '@reduxjs/toolkit'
-import countries from './countries';
-import teams from './teams';
 import user from './user';
+import countries from './countries';
+import leagues from './leagues';
+import seasons from './seasons';
+import teams from './teams';
+import filters from './filters';
 
 const rootReducer = combineReducers({
-    countries,
-    teams,
-    user,
+  user,
+  countries,
+  seasons,
+  leagues,
+  teams,
+  filters,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

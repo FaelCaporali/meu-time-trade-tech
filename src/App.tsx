@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 import { Container, Navbar } from 'react-bootstrap';
-import Routes from './components/App.Routes';
+import Routes from './resources/components/App.Routes';
 // import { Link } from 'react-router-dom'
 
 function App() {
