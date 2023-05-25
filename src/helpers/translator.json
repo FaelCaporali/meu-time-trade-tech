@@ -4,5 +4,17 @@
         "season": "a temporada",
         "league": "o campeonato",
         "team": "o time"
+    },
+    "fixtures": {
+        "draws": "empates",
+        "loses": "derrotas",
+        "played": "total",
+        "wins": "vitórias"
+    },
+    "nationalities": {
+        "Brazil": "Brasil",
+        "Spain": "Espanha",
+        "Paraguay": "Paraguai",
+        "Ecuador": "Equador"
     }
 }
