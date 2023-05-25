@@ -1,8 +1,29 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from '../index';
 
+interface ITeamInfo {
+  team: {
+    id: number;
+    name: string;
+    code: string;
+    country: string;
+    founded: number;
+    national: boolean;
+    logo: string;
+  };
+  venue: {
+    id: number;
+    name: string;
+    address: string;
+    city: string;
+    capacity: number;
+    surface: string;
+    image: string;
+  };
+}
 interface ITeamsStatsState {
-    stats: ITeamStats[];
+  list: ITeamInfo[];  
+  stats: ITeamStats[];
 }
 interface IResults {
     home: number;
@@ -49,12 +70,12 @@ interface ITeamStats {
     teamId: number;
     name: string;
     season: number;
-    league: string;
+    league: number;
     players: IPlayer[];
     lineUp: {
         formation: string;
         played: number;
-    };
+    }[];
     fixtures: {
         played: IResults;
         wins: IResults;
@@ -66,6 +87,7 @@ interface ITeamStats {
 
 const initialState: ITeamsStatsState = {
   stats: [],
+  list: [],
 }
 
 export const teamsSlice = createSlice({
@@ -77,11 +99,17 @@ export const teamsSlice = createSlice({
     },
     clearStats: (state) => {
       state.stats = [];
+    },
+    setList: (state, action: PayloadAction<ITeamInfo[]>) => {
+      state.list = action.payload;
+    },
+    clearList: (state) => {
+      state.list = [];
     }
   }
 })
 
-export const { addStats, clearStats } = teamsSlice.actions;
+export const { addStats, clearStats, setList, clearList } = teamsSlice.actions;
 
 export const selectTeamStats = (state: RootState) => state.teams.stats;
 
