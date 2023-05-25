@@ -3,8 +3,8 @@ import { RootState } from '../index';
 
 interface ICountry {
     name: string;
-    code: string;
-    flag: string;
+    code: string|null;
+    flag: string|null;
 }
 
 interface ICountriesState {
