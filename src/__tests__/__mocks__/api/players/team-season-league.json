@@ -1,0 +1,1916 @@
+{
+    "get": "players",
+    "parameters": {
+      "season": "2022",
+      "league": "71",
+      "team": "1062"
+    },
+    "errors": [],
+    "results": 20,
+    "paging": {
+      "current": 1,
+      "total": 3
+    },
+    "response": [
+      {
+        "player": {
+          "id": 311276,
+          "name": "Carlos Daniel",
+          "firstname": "Carlos Daniel",
+          "lastname": "de Medeiros Silva",
+          "age": 21,
+          "birth": {
+            "date": "2002-01-23",
+            "place": null,
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": "173 cm",
+          "weight": "78 kg",
+          "injured": false,
+          "photo": "https://media-2.api-sports.io/football/players/311276.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 1062,
+              "name": "Atletico-MG",
+              "logo": "https://media-3.api-sports.io/football/teams/1062.png"
+            },
+            "league": {
+              "id": 71,
+              "name": "Serie A",
+              "country": "Brazil",
+              "logo": "https://media-2.api-sports.io/football/leagues/71.png",
+              "flag": "https://media-3.api-sports.io/flags/br.svg",
+              "season": 2022
+            },
+            "games": {
+              "appearences": 0,
+              "lineups": 0,
+              "minutes": 0,
+              "number": null,
+              "position": "Defender",
+              "rating": null,
+              "captain": false
+            },
+            "substitutes": {
+              "in": 0,
+              "out": 0,
+              "bench": 2
+            },
+            "shots": {
+              "total": null,
+              "on": null
+            },
+            "goals": {
+              "total": 0,
+              "conceded": 0,
+              "assists": null,
+              "saves": null
+            },
+            "passes": {
+              "total": null,
+              "key": null,
+              "accuracy": null
+            },
+            "tackles": {
+              "total": null,
+              "blocks": null,
+              "interceptions": null
+            },
+            "duels": {
+              "total": null,
+              "won": null
+            },
+            "dribbles": {
+              "attempts": null,
+              "success": null,
+              "past": null
+            },
+            "fouls": {
+              "drawn": null,
+              "committed": null
+            },
+            "cards": {
+              "yellow": 0,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": null
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 133182,
+          "name": "Vitor Mendes",
+          "firstname": "Vitor",
+          "lastname": "Mendes Alves",
+          "age": 24,
+          "birth": {
+            "date": "1999-02-13",
+            "place": "Belém",
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": "186 cm",
+          "weight": "75 kg",
+          "injured": false,
+          "photo": "https://media-2.api-sports.io/football/players/133182.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 1062,
+              "name": "Atletico-MG",
+              "logo": "https://media-1.api-sports.io/football/teams/1062.png"
+            },
+            "league": {
+              "id": 71,
+              "name": "Serie A",
+              "country": "Brazil",
+              "logo": "https://media-3.api-sports.io/football/leagues/71.png",
+              "flag": "https://media-1.api-sports.io/flags/br.svg",
+              "season": 2022
+            },
+            "games": {
+              "appearences": 0,
+              "lineups": 0,
+              "minutes": 0,
+              "number": null,
+              "position": "Defender",
+              "rating": "6.766666",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 0,
+              "out": 0,
+              "bench": 0
+            },
+            "shots": {
+              "total": 14,
+              "on": 4
+            },
+            "goals": {
+              "total": 0,
+              "conceded": 0,
+              "assists": null,
+              "saves": null
+            },
+            "passes": {
+              "total": 730,
+              "key": 2,
+              "accuracy": 33
+            },
+            "tackles": {
+              "total": 18,
+              "blocks": 12,
+              "interceptions": 29
+            },
+            "duels": {
+              "total": 124,
+              "won": 70
+            },
+            "dribbles": {
+              "attempts": 2,
+              "success": null,
+              "past": null
+            },
+            "fouls": {
+              "drawn": 14,
+              "committed": 15
+            },
+            "cards": {
+              "yellow": 0,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": null
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 9854,
+          "name": "Ademir",
+          "firstname": "Ademir",
+          "lastname": "da Silva Santos Júnior",
+          "age": 28,
+          "birth": {
+            "date": "1995-02-16",
+            "place": "São Paulo",
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": "172 cm",
+          "weight": null,
+          "injured": false,
+          "photo": "https://media-3.api-sports.io/football/players/9854.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 1062,
+              "name": "Atletico-MG",
+              "logo": "https://media-1.api-sports.io/football/teams/1062.png"
+            },
+            "league": {
+              "id": 71,
+              "name": "Serie A",
+              "country": "Brazil",
+              "logo": "https://media-2.api-sports.io/football/leagues/71.png",
+              "flag": "https://media-3.api-sports.io/flags/br.svg",
+              "season": 2022
+            },
+            "games": {
+              "appearences": 35,
+              "lineups": 15,
+              "minutes": 1487,
+              "number": null,
+              "position": "Attacker",
+              "rating": "6.726666",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 20,
+              "out": 14,
+              "bench": 22
+            },
+            "shots": {
+              "total": 28,
+              "on": 11
+            },
+            "goals": {
+              "total": 2,
+              "conceded": 0,
+              "assists": null,
+              "saves": null
+            },
+            "passes": {
+              "total": 341,
+              "key": 22,
+              "accuracy": 9
+            },
+            "tackles": {
+              "total": 27,
+              "blocks": 1,
+              "interceptions": 5
+            },
+            "duels": {
+              "total": 225,
+              "won": 111
+            },
+            "dribbles": {
+              "attempts": 59,
+              "success": 29,
+              "past": null
+            },
+            "fouls": {
+              "drawn": 49,
+              "committed": 16
+            },
+            "cards": {
+              "yellow": 4,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": null
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 9890,
+          "name": "Jair",
+          "firstname": "Jair",
+          "lastname": "Rodrigues Júnior",
+          "age": 29,
+          "birth": {
+            "date": "1994-08-26",
+            "place": "Ibirubá",
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": "178 cm",
+          "weight": "74 kg",
+          "injured": false,
+          "photo": "https://media-2.api-sports.io/football/players/9890.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 1062,
+              "name": "Atletico-MG",
+              "logo": "https://media-2.api-sports.io/football/teams/1062.png"
+            },
+            "league": {
+              "id": 71,
+              "name": "Serie A",
+              "country": "Brazil",
+              "logo": "https://media-1.api-sports.io/football/leagues/71.png",
+              "flag": "https://media-2.api-sports.io/flags/br.svg",
+              "season": 2022
+            },
+            "games": {
+              "appearences": 31,
+              "lineups": 26,
+              "minutes": 2089,
+              "number": null,
+              "position": "Midfielder",
+              "rating": "6.960000",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 5,
+              "out": 19,
+              "bench": 9
+            },
+            "shots": {
+              "total": 14,
+              "on": 4
+            },
+            "goals": {
+              "total": 1,
+              "conceded": 0,
+              "assists": 4,
+              "saves": null
+            },
+            "passes": {
+              "total": 941,
+              "key": 21,
+              "accuracy": 33
+            },
+            "tackles": {
+              "total": 52,
+              "blocks": 3,
+              "interceptions": 31
+            },
+            "duels": {
+              "total": 221,
+              "won": 117
+            },
+            "dribbles": {
+              "attempts": 19,
+              "success": 11,
+              "past": null
+            },
+            "fouls": {
+              "drawn": 24,
+              "committed": 38
+            },
+            "cards": {
+              "yellow": 5,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": null
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 9958,
+          "name": "Tchê Tchê",
+          "firstname": "Danilo",
+          "lastname": "das Neves Pinheiro",
+          "age": 31,
+          "birth": {
+            "date": "1992-08-30",
+            "place": "São Paulo",
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": "176 cm",
+          "weight": "66 kg",
+          "injured": false,
+          "photo": "https://media-2.api-sports.io/football/players/9958.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 1062,
+              "name": "Atletico-MG",
+              "logo": "https://media-2.api-sports.io/football/teams/1062.png"
+            },
+            "league": {
+              "id": 71,
+              "name": "Serie A",
+              "country": "Brazil",
+              "logo": "https://media-1.api-sports.io/football/leagues/71.png",
+              "flag": "https://media-1.api-sports.io/flags/br.svg",
+              "season": 2022
+            },
+            "games": {
+              "appearences": 0,
+              "lineups": 0,
+              "minutes": 0,
+              "number": null,
+              "position": "Midfielder",
+              "rating": "6.707142",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 0,
+              "out": 0,
+              "bench": 1
+            },
+            "shots": {
+              "total": 10,
+              "on": 4
+            },
+            "goals": {
+              "total": 0,
+              "conceded": 0,
+              "assists": null,
+              "saves": null
+            },
+            "passes": {
+              "total": 1059,
+              "key": 11,
+              "accuracy": 33
+            },
+            "tackles": {
+              "total": 29,
+              "blocks": 3,
+              "interceptions": 27
+            },
+            "duels": {
+              "total": 183,
+              "won": 89
+            },
+            "dribbles": {
+              "attempts": 14,
+              "success": 11,
+              "past": null
+            },
+            "fouls": {
+              "drawn": 42,
+              "committed": 37
+            },
+            "cards": {
+              "yellow": 0,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": null
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 10081,
+          "name": "Rafael",
+          "firstname": "Rafael",
+          "lastname": "Pires Monteiro",
+          "age": 34,
+          "birth": {
+            "date": "1989-06-23",
+            "place": "Coronel Fabriciano",
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": "190 cm",
+          "weight": "93 kg",
+          "injured": false,
+          "photo": "https://media-1.api-sports.io/football/players/10081.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 1062,
+              "name": "Atletico-MG",
+              "logo": "https://media-2.api-sports.io/football/teams/1062.png"
+            },
+            "league": {
+              "id": 71,
+              "name": "Serie A",
+              "country": "Brazil",
+              "logo": "https://media-1.api-sports.io/football/leagues/71.png",
+              "flag": "https://media-2.api-sports.io/flags/br.svg",
+              "season": 2022
+            },
+            "games": {
+              "appearences": 1,
+              "lineups": 1,
+              "minutes": 90,
+              "number": null,
+              "position": "Goalkeeper",
+              "rating": "7.300000",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 0,
+              "out": 0,
+              "bench": 37
+            },
+            "shots": {
+              "total": null,
+              "on": null
+            },
+            "goals": {
+              "total": 0,
+              "conceded": 0,
+              "assists": null,
+              "saves": 2
+            },
+            "passes": {
+              "total": 15,
+              "key": null,
+              "accuracy": 14
+            },
+            "tackles": {
+              "total": null,
+              "blocks": null,
+              "interceptions": null
+            },
+            "duels": {
+              "total": null,
+              "won": null
+            },
+            "dribbles": {
+              "attempts": null,
+              "success": null,
+              "past": null
+            },
+            "fouls": {
+              "drawn": null,
+              "committed": null
+            },
+            "cards": {
+              "yellow": 0,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": 0
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 9874,
+          "name": "Guga",
+          "firstname": "Cláudio",
+          "lastname": "Rodrigues Gomes",
+          "age": 25,
+          "birth": {
+            "date": "1998-08-29",
+            "place": "Rio de Janeiro",
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": "173 cm",
+          "weight": "70 kg",
+          "injured": false,
+          "photo": "https://media-1.api-sports.io/football/players/9874.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 1062,
+              "name": "Atletico-MG",
+              "logo": "https://media-1.api-sports.io/football/teams/1062.png"
+            },
+            "league": {
+              "id": 71,
+              "name": "Serie A",
+              "country": "Brazil",
+              "logo": "https://media-2.api-sports.io/football/leagues/71.png",
+              "flag": "https://media-3.api-sports.io/flags/br.svg",
+              "season": 2022
+            },
+            "games": {
+              "appearences": 22,
+              "lineups": 19,
+              "minutes": 1678,
+              "number": null,
+              "position": "Defender",
+              "rating": "6.942105",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 3,
+              "out": 6,
+              "bench": 18
+            },
+            "shots": {
+              "total": 7,
+              "on": 1
+            },
+            "goals": {
+              "total": 0,
+              "conceded": 0,
+              "assists": 2,
+              "saves": null
+            },
+            "passes": {
+              "total": 823,
+              "key": 14,
+              "accuracy": 35
+            },
+            "tackles": {
+              "total": 50,
+              "blocks": 3,
+              "interceptions": 24
+            },
+            "duels": {
+              "total": 154,
+              "won": 86
+            },
+            "dribbles": {
+              "attempts": 14,
+              "success": 8,
+              "past": null
+            },
+            "fouls": {
+              "drawn": 18,
+              "committed": 18
+            },
+            "cards": {
+              "yellow": 1,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": null
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 16847,
+          "name": "Keno",
+          "firstname": "Marcos",
+          "lastname": "da Silva França",
+          "age": 34,
+          "birth": {
+            "date": "1989-09-10",
+            "place": "Salvador",
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": "179 cm",
+          "weight": "72 kg",
+          "injured": false,
+          "photo": "https://media-3.api-sports.io/football/players/16847.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 1062,
+              "name": "Atletico-MG",
+              "logo": "https://media-2.api-sports.io/football/teams/1062.png"
+            },
+            "league": {
+              "id": 71,
+              "name": "Serie A",
+              "country": "Brazil",
+              "logo": "https://media-2.api-sports.io/football/leagues/71.png",
+              "flag": "https://media-2.api-sports.io/flags/br.svg",
+              "season": 2022
+            },
+            "games": {
+              "appearences": 29,
+              "lineups": 22,
+              "minutes": 1865,
+              "number": null,
+              "position": "Attacker",
+              "rating": "7.012000",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 7,
+              "out": 17,
+              "bench": 7
+            },
+            "shots": {
+              "total": 37,
+              "on": 14
+            },
+            "goals": {
+              "total": 4,
+              "conceded": 0,
+              "assists": null,
+              "saves": null
+            },
+            "passes": {
+              "total": 537,
+              "key": 35,
+              "accuracy": 15
+            },
+            "tackles": {
+              "total": 38,
+              "blocks": 4,
+              "interceptions": 4
+            },
+            "duels": {
+              "total": 239,
+              "won": 121
+            },
+            "dribbles": {
+              "attempts": 92,
+              "success": 45,
+              "past": null
+            },
+            "fouls": {
+              "drawn": 25,
+              "committed": 20
+            },
+            "cards": {
+              "yellow": 5,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": null
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 311275,
+          "name": "Gabriel Delfim",
+          "firstname": "Gabriel",
+          "lastname": "Delfim Ferreira",
+          "age": 21,
+          "birth": {
+            "date": "2002-07-10",
+            "place": null,
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": "189 cm",
+          "weight": "91 kg",
+          "injured": false,
+          "photo": "https://media-3.api-sports.io/football/players/311275.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 1062,
+              "name": "Atletico-MG",
+              "logo": "https://media-1.api-sports.io/football/teams/1062.png"
+            },
+            "league": {
+              "id": 71,
+              "name": "Serie A",
+              "country": "Brazil",
+              "logo": "https://media-2.api-sports.io/football/leagues/71.png",
+              "flag": "https://media-3.api-sports.io/flags/br.svg",
+              "season": 2022
+            },
+            "games": {
+              "appearences": 0,
+              "lineups": 0,
+              "minutes": 0,
+              "number": null,
+              "position": "Goalkeeper",
+              "rating": null,
+              "captain": false
+            },
+            "substitutes": {
+              "in": 0,
+              "out": 0,
+              "bench": 1
+            },
+            "shots": {
+              "total": null,
+              "on": null
+            },
+            "goals": {
+              "total": 0,
+              "conceded": 0,
+              "assists": null,
+              "saves": null
+            },
+            "passes": {
+              "total": null,
+              "key": null,
+              "accuracy": null
+            },
+            "tackles": {
+              "total": null,
+              "blocks": null,
+              "interceptions": null
+            },
+            "duels": {
+              "total": null,
+              "won": null
+            },
+            "dribbles": {
+              "attempts": null,
+              "success": null,
+              "past": null
+            },
+            "fouls": {
+              "drawn": null,
+              "committed": null
+            },
+            "cards": {
+              "yellow": 0,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": 0
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 9978,
+          "name": "Everson",
+          "firstname": "Everson Felipe",
+          "lastname": "Marques Pires",
+          "age": 33,
+          "birth": {
+            "date": "1990-07-22",
+            "place": "São Paulo",
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": "192 cm",
+          "weight": "83 kg",
+          "injured": false,
+          "photo": "https://media-3.api-sports.io/football/players/9978.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 1062,
+              "name": "Atletico-MG",
+              "logo": "https://media-1.api-sports.io/football/teams/1062.png"
+            },
+            "league": {
+              "id": 71,
+              "name": "Serie A",
+              "country": "Brazil",
+              "logo": "https://media-1.api-sports.io/football/leagues/71.png",
+              "flag": "https://media-2.api-sports.io/flags/br.svg",
+              "season": 2022
+            },
+            "games": {
+              "appearences": 37,
+              "lineups": 37,
+              "minutes": 3330,
+              "number": null,
+              "position": "Goalkeeper",
+              "rating": "6.890625",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 0,
+              "out": 0,
+              "bench": 0
+            },
+            "shots": {
+              "total": null,
+              "on": null
+            },
+            "goals": {
+              "total": 0,
+              "conceded": 35,
+              "assists": null,
+              "saves": 71
+            },
+            "passes": {
+              "total": 869,
+              "key": 1,
+              "accuracy": 20
+            },
+            "tackles": {
+              "total": null,
+              "blocks": null,
+              "interceptions": null
+            },
+            "duels": {
+              "total": 9,
+              "won": 8
+            },
+            "dribbles": {
+              "attempts": null,
+              "success": null,
+              "past": null
+            },
+            "fouls": {
+              "drawn": 4,
+              "committed": null
+            },
+            "cards": {
+              "yellow": 5,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": 0
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 197017,
+          "name": "Matheus Mendes",
+          "firstname": "Matheus",
+          "lastname": "Mendes Werneck de Oliveira",
+          "age": 24,
+          "birth": {
+            "date": "1999-03-10",
+            "place": "Governador Valadares",
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": "190 cm",
+          "weight": "89 kg",
+          "injured": false,
+          "photo": "https://media-2.api-sports.io/football/players/197017.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 1062,
+              "name": "Atletico-MG",
+              "logo": "https://media-1.api-sports.io/football/teams/1062.png"
+            },
+            "league": {
+              "id": 71,
+              "name": "Serie A",
+              "country": "Brazil",
+              "logo": "https://media-1.api-sports.io/football/leagues/71.png",
+              "flag": "https://media-1.api-sports.io/flags/br.svg",
+              "season": 2022
+            },
+            "games": {
+              "appearences": 0,
+              "lineups": 0,
+              "minutes": 0,
+              "number": null,
+              "position": "Goalkeeper",
+              "rating": null,
+              "captain": false
+            },
+            "substitutes": {
+              "in": 0,
+              "out": 0,
+              "bench": 21
+            },
+            "shots": {
+              "total": null,
+              "on": null
+            },
+            "goals": {
+              "total": 0,
+              "conceded": 0,
+              "assists": null,
+              "saves": null
+            },
+            "passes": {
+              "total": null,
+              "key": null,
+              "accuracy": null
+            },
+            "tackles": {
+              "total": null,
+              "blocks": null,
+              "interceptions": null
+            },
+            "duels": {
+              "total": null,
+              "won": null
+            },
+            "dribbles": {
+              "attempts": null,
+              "success": null,
+              "past": null
+            },
+            "fouls": {
+              "drawn": null,
+              "committed": null
+            },
+            "cards": {
+              "yellow": 0,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": 0
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 9863,
+          "name": "Réver",
+          "firstname": "Réver Humberto",
+          "lastname": "Alves de Araújo",
+          "age": 38,
+          "birth": {
+            "date": "1985-01-04",
+            "place": "Ariranha",
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": "192 cm",
+          "weight": "85 kg",
+          "injured": false,
+          "photo": "https://media-2.api-sports.io/football/players/9863.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 1062,
+              "name": "Atletico-MG",
+              "logo": "https://media-2.api-sports.io/football/teams/1062.png"
+            },
+            "league": {
+              "id": 71,
+              "name": "Serie A",
+              "country": "Brazil",
+              "logo": "https://media-1.api-sports.io/football/leagues/71.png",
+              "flag": "https://media-1.api-sports.io/flags/br.svg",
+              "season": 2022
+            },
+            "games": {
+              "appearences": 15,
+              "lineups": 10,
+              "minutes": 941,
+              "number": null,
+              "position": "Defender",
+              "rating": "6.909090",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 5,
+              "out": 1,
+              "bench": 26
+            },
+            "shots": {
+              "total": 3,
+              "on": 1
+            },
+            "goals": {
+              "total": 1,
+              "conceded": 0,
+              "assists": null,
+              "saves": null
+            },
+            "passes": {
+              "total": 607,
+              "key": 1,
+              "accuracy": 53
+            },
+            "tackles": {
+              "total": 9,
+              "blocks": 5,
+              "interceptions": 10
+            },
+            "duels": {
+              "total": 58,
+              "won": 37
+            },
+            "dribbles": {
+              "attempts": 1,
+              "success": 1,
+              "past": null
+            },
+            "fouls": {
+              "drawn": 5,
+              "committed": 8
+            },
+            "cards": {
+              "yellow": 2,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": null
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 10087,
+          "name": "Dodô",
+          "firstname": "José Rodolfo",
+          "lastname": "Pires Ribeiro",
+          "age": 31,
+          "birth": {
+            "date": "1992-02-06",
+            "place": "Campinas",
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": "181 cm",
+          "weight": "79 kg",
+          "injured": false,
+          "photo": "https://media-1.api-sports.io/football/players/10087.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 1062,
+              "name": "Atletico-MG",
+              "logo": "https://media-3.api-sports.io/football/teams/1062.png"
+            },
+            "league": {
+              "id": 71,
+              "name": "Serie A",
+              "country": "Brazil",
+              "logo": "https://media-2.api-sports.io/football/leagues/71.png",
+              "flag": "https://media-2.api-sports.io/flags/br.svg",
+              "season": 2022
+            },
+            "games": {
+              "appearences": 13,
+              "lineups": 11,
+              "minutes": 908,
+              "number": null,
+              "position": "Defender",
+              "rating": "6.892307",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 2,
+              "out": 6,
+              "bench": 11
+            },
+            "shots": {
+              "total": 7,
+              "on": 2
+            },
+            "goals": {
+              "total": 1,
+              "conceded": 0,
+              "assists": null,
+              "saves": null
+            },
+            "passes": {
+              "total": 368,
+              "key": 10,
+              "accuracy": 24
+            },
+            "tackles": {
+              "total": 14,
+              "blocks": null,
+              "interceptions": 12
+            },
+            "duels": {
+              "total": 64,
+              "won": 34
+            },
+            "dribbles": {
+              "attempts": 5,
+              "success": 3,
+              "past": null
+            },
+            "fouls": {
+              "drawn": 7,
+              "committed": 10
+            },
+            "cards": {
+              "yellow": 1,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": null
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 9872,
+          "name": "Igor Rabello",
+          "firstname": "Igor",
+          "lastname": "Rabello da Costa",
+          "age": 28,
+          "birth": {
+            "date": "1995-04-28",
+            "place": "Rio de Janeiro",
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": "190 cm",
+          "weight": "90 kg",
+          "injured": false,
+          "photo": "https://media-1.api-sports.io/football/players/9872.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 1062,
+              "name": "Atletico-MG",
+              "logo": "https://media-2.api-sports.io/football/teams/1062.png"
+            },
+            "league": {
+              "id": 71,
+              "name": "Serie A",
+              "country": "Brazil",
+              "logo": "https://media-3.api-sports.io/football/leagues/71.png",
+              "flag": "https://media-2.api-sports.io/flags/br.svg",
+              "season": 2022
+            },
+            "games": {
+              "appearences": 7,
+              "lineups": 7,
+              "minutes": 600,
+              "number": null,
+              "position": "Defender",
+              "rating": "7.500000",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 0,
+              "out": 1,
+              "bench": 15
+            },
+            "shots": {
+              "total": 5,
+              "on": 2
+            },
+            "goals": {
+              "total": 1,
+              "conceded": 0,
+              "assists": 1,
+              "saves": null
+            },
+            "passes": {
+              "total": 376,
+              "key": 2,
+              "accuracy": 57
+            },
+            "tackles": {
+              "total": 11,
+              "blocks": 8,
+              "interceptions": 15
+            },
+            "duels": {
+              "total": 51,
+              "won": 33
+            },
+            "dribbles": {
+              "attempts": null,
+              "success": null,
+              "past": null
+            },
+            "fouls": {
+              "drawn": 3,
+              "committed": 5
+            },
+            "cards": {
+              "yellow": 1,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": null
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 434,
+          "name": "Mariano",
+          "firstname": "Mariano",
+          "lastname": "Ferreira Filho",
+          "age": 37,
+          "birth": {
+            "date": "1986-06-23",
+            "place": "São João",
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": "185 cm",
+          "weight": "77 kg",
+          "injured": false,
+          "photo": "https://media-1.api-sports.io/football/players/434.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 1062,
+              "name": "Atletico-MG",
+              "logo": "https://media-1.api-sports.io/football/teams/1062.png"
+            },
+            "league": {
+              "id": 71,
+              "name": "Serie A",
+              "country": "Brazil",
+              "logo": "https://media-1.api-sports.io/football/leagues/71.png",
+              "flag": "https://media-1.api-sports.io/flags/br.svg",
+              "season": 2022
+            },
+            "games": {
+              "appearences": 25,
+              "lineups": 19,
+              "minutes": 1728,
+              "number": null,
+              "position": "Defender",
+              "rating": "6.886363",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 6,
+              "out": 2,
+              "bench": 13
+            },
+            "shots": {
+              "total": 3,
+              "on": null
+            },
+            "goals": {
+              "total": 0,
+              "conceded": 0,
+              "assists": null,
+              "saves": null
+            },
+            "passes": {
+              "total": 804,
+              "key": 24,
+              "accuracy": 30
+            },
+            "tackles": {
+              "total": 36,
+              "blocks": 1,
+              "interceptions": 20
+            },
+            "duels": {
+              "total": 126,
+              "won": 65
+            },
+            "dribbles": {
+              "attempts": 11,
+              "success": 4,
+              "past": null
+            },
+            "fouls": {
+              "drawn": 11,
+              "committed": 14
+            },
+            "cards": {
+              "yellow": 5,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": null
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 96,
+          "name": "Jemerson",
+          "firstname": "Jemerson",
+          "lastname": "de Jesus Nascimento",
+          "age": 31,
+          "birth": {
+            "date": "1992-08-24",
+            "place": "Jeremoabo",
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": "184 cm",
+          "weight": "77 kg",
+          "injured": false,
+          "photo": "https://media-1.api-sports.io/football/players/96.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 1062,
+              "name": "Atletico-MG",
+              "logo": "https://media-2.api-sports.io/football/teams/1062.png"
+            },
+            "league": {
+              "id": 71,
+              "name": "Serie A",
+              "country": "Brazil",
+              "logo": "https://media-3.api-sports.io/football/leagues/71.png",
+              "flag": "https://media-1.api-sports.io/flags/br.svg",
+              "season": 2022
+            },
+            "games": {
+              "appearences": 12,
+              "lineups": 12,
+              "minutes": 998,
+              "number": null,
+              "position": "Defender",
+              "rating": "6.916666",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 0,
+              "out": 3,
+              "bench": 3
+            },
+            "shots": {
+              "total": 2,
+              "on": 2
+            },
+            "goals": {
+              "total": 0,
+              "conceded": 0,
+              "assists": null,
+              "saves": null
+            },
+            "passes": {
+              "total": 573,
+              "key": 2,
+              "accuracy": 42
+            },
+            "tackles": {
+              "total": 18,
+              "blocks": 4,
+              "interceptions": 9
+            },
+            "duels": {
+              "total": 80,
+              "won": 43
+            },
+            "dribbles": {
+              "attempts": null,
+              "success": null,
+              "past": null
+            },
+            "fouls": {
+              "drawn": 6,
+              "committed": 21
+            },
+            "cards": {
+              "yellow": 6,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": null
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 9697,
+          "name": "Nathan Silva",
+          "firstname": "Nathanael Ananias",
+          "lastname": "da Silva",
+          "age": 26,
+          "birth": {
+            "date": "1997-05-06",
+            "place": "Oliveira",
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": "182 cm",
+          "weight": "84 kg",
+          "injured": false,
+          "photo": "https://media-2.api-sports.io/football/players/9697.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 1062,
+              "name": "Atletico-MG",
+              "logo": "https://media-3.api-sports.io/football/teams/1062.png"
+            },
+            "league": {
+              "id": 71,
+              "name": "Serie A",
+              "country": "Brazil",
+              "logo": "https://media-1.api-sports.io/football/leagues/71.png",
+              "flag": "https://media-3.api-sports.io/flags/br.svg",
+              "season": 2022
+            },
+            "games": {
+              "appearences": 22,
+              "lineups": 18,
+              "minutes": 1729,
+              "number": null,
+              "position": "Defender",
+              "rating": "6.989473",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 4,
+              "out": 1,
+              "bench": 18
+            },
+            "shots": {
+              "total": 9,
+              "on": 1
+            },
+            "goals": {
+              "total": 0,
+              "conceded": 0,
+              "assists": null,
+              "saves": null
+            },
+            "passes": {
+              "total": 1010,
+              "key": 3,
+              "accuracy": 47
+            },
+            "tackles": {
+              "total": 23,
+              "blocks": 12,
+              "interceptions": 26
+            },
+            "duels": {
+              "total": 158,
+              "won": 84
+            },
+            "dribbles": {
+              "attempts": null,
+              "success": null,
+              "past": null
+            },
+            "fouls": {
+              "drawn": 7,
+              "committed": 32
+            },
+            "cards": {
+              "yellow": 8,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": null
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 1262,
+          "name": "Otávio",
+          "firstname": "Otávio Henrique",
+          "lastname": "Passos Santos",
+          "age": 29,
+          "birth": {
+            "date": "1994-05-04",
+            "place": "Maceió",
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": "176 cm",
+          "weight": "73 kg",
+          "injured": false,
+          "photo": "https://media-2.api-sports.io/football/players/1262.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 1062,
+              "name": "Atletico-MG",
+              "logo": "https://media-1.api-sports.io/football/teams/1062.png"
+            },
+            "league": {
+              "id": 71,
+              "name": "Serie A",
+              "country": "Brazil",
+              "logo": "https://media-3.api-sports.io/football/leagues/71.png",
+              "flag": "https://media-1.api-sports.io/flags/br.svg",
+              "season": 2022
+            },
+            "games": {
+              "appearences": 24,
+              "lineups": 11,
+              "minutes": 1155,
+              "number": null,
+              "position": "Midfielder",
+              "rating": "6.700000",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 13,
+              "out": 7,
+              "bench": 21
+            },
+            "shots": {
+              "total": 1,
+              "on": 1
+            },
+            "goals": {
+              "total": 0,
+              "conceded": 0,
+              "assists": null,
+              "saves": null
+            },
+            "passes": {
+              "total": 730,
+              "key": 1,
+              "accuracy": 33
+            },
+            "tackles": {
+              "total": 29,
+              "blocks": 3,
+              "interceptions": 8
+            },
+            "duels": {
+              "total": 91,
+              "won": 44
+            },
+            "dribbles": {
+              "attempts": 5,
+              "success": 4,
+              "past": null
+            },
+            "fouls": {
+              "drawn": 5,
+              "committed": 19
+            },
+            "cards": {
+              "yellow": 2,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": null
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 2477,
+          "name": "M. Zaracho",
+          "firstname": "Federico Matías",
+          "lastname": "Zaracho",
+          "age": 25,
+          "birth": {
+            "date": "1998-03-10",
+            "place": "Wilde",
+            "country": "Argentina"
+          },
+          "nationality": "Argentina",
+          "height": "171 cm",
+          "weight": "67 kg",
+          "injured": false,
+          "photo": "https://media-1.api-sports.io/football/players/2477.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 1062,
+              "name": "Atletico-MG",
+              "logo": "https://media-1.api-sports.io/football/teams/1062.png"
+            },
+            "league": {
+              "id": 71,
+              "name": "Serie A",
+              "country": "Brazil",
+              "logo": "https://media-3.api-sports.io/football/leagues/71.png",
+              "flag": "https://media-3.api-sports.io/flags/br.svg",
+              "season": 2022
+            },
+            "games": {
+              "appearences": 26,
+              "lineups": 24,
+              "minutes": 1898,
+              "number": null,
+              "position": "Midfielder",
+              "rating": "6.808333",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 2,
+              "out": 17,
+              "bench": 2
+            },
+            "shots": {
+              "total": 30,
+              "on": 8
+            },
+            "goals": {
+              "total": 2,
+              "conceded": 0,
+              "assists": 1,
+              "saves": null
+            },
+            "passes": {
+              "total": 852,
+              "key": 28,
+              "accuracy": 29
+            },
+            "tackles": {
+              "total": 49,
+              "blocks": 2,
+              "interceptions": 18
+            },
+            "duels": {
+              "total": 265,
+              "won": 112
+            },
+            "dribbles": {
+              "attempts": 32,
+              "success": 20,
+              "past": null
+            },
+            "fouls": {
+              "drawn": 23,
+              "committed": 31
+            },
+            "cards": {
+              "yellow": 3,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": null
+            }
+          }
+        ]
+      },
+      {
+        "player": {
+          "id": 10319,
+          "name": "Allan",
+          "firstname": "Allan",
+          "lastname": "Rodrigues de Souza",
+          "age": 26,
+          "birth": {
+            "date": "1997-03-03",
+            "place": "Araçatuba",
+            "country": "Brazil"
+          },
+          "nationality": "Brazil",
+          "height": "176 cm",
+          "weight": "75 kg",
+          "injured": false,
+          "photo": "https://media-2.api-sports.io/football/players/10319.png"
+        },
+        "statistics": [
+          {
+            "team": {
+              "id": 1062,
+              "name": "Atletico-MG",
+              "logo": "https://media-1.api-sports.io/football/teams/1062.png"
+            },
+            "league": {
+              "id": 71,
+              "name": "Serie A",
+              "country": "Brazil",
+              "logo": "https://media-3.api-sports.io/football/leagues/71.png",
+              "flag": "https://media-2.api-sports.io/flags/br.svg",
+              "season": 2022
+            },
+            "games": {
+              "appearences": 33,
+              "lineups": 31,
+              "minutes": 2736,
+              "number": null,
+              "position": "Midfielder",
+              "rating": "6.879310",
+              "captain": false
+            },
+            "substitutes": {
+              "in": 2,
+              "out": 5,
+              "bench": 3
+            },
+            "shots": {
+              "total": 23,
+              "on": 12
+            },
+            "goals": {
+              "total": 0,
+              "conceded": 0,
+              "assists": null,
+              "saves": null
+            },
+            "passes": {
+              "total": 1795,
+              "key": 17,
+              "accuracy": 52
+            },
+            "tackles": {
+              "total": 43,
+              "blocks": 4,
+              "interceptions": 24
+            },
+            "duels": {
+              "total": 178,
+              "won": 99
+            },
+            "dribbles": {
+              "attempts": 26,
+              "success": 17,
+              "past": null
+            },
+            "fouls": {
+              "drawn": 23,
+              "committed": 38
+            },
+            "cards": {
+              "yellow": 10,
+              "yellowred": 0,
+              "red": 0
+            },
+            "penalty": {
+              "won": null,
+              "commited": null,
+              "scored": 0,
+              "missed": 0,
+              "saved": null
+            }
+          }
+        ]
+      }
+    ]
+  }
