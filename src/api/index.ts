@@ -53,13 +53,15 @@ export const fetchUserStatus = async (key: string) => {
   });
 
   if (Object.entries(response.errors).length) {
-    logout();
+    store.dispatch(logout());
     throw new Error('credencial inválida');
   } else {
-    login({
-      key,
-      status: response.response.status
-    });
+    store.dispatch(
+      login({
+        key,
+        status: response.response
+      })
+    );
     return true;
   }
 }
@@ -76,11 +78,10 @@ export const fetchCountries = async () => {
   });
 
   if (
-    response.status !== 200 ||
     response.errors.length
   ) throw new Error('Erro de comunicação, aguarde um momento ou revise suas credencias.');
 
-  setCountries(response.response);
+  store.dispatch(setCountries(response.response));
 }
 
 export const fetchSeasons = async () => {
@@ -95,11 +96,10 @@ export const fetchSeasons = async () => {
   });
 
   if (
-    response.status !== 200
-    || response.errors.length
+    response.errors.length
   ) throw new Error('Erro de comunicação, aguarde um momento ou revise suas credencias.');
 
-  setSeasons(response.response);
+  store.dispatch(setSeasons(response.response));
 }
 
 export const fetchLeagues = async () => {
@@ -116,11 +116,10 @@ export const fetchLeagues = async () => {
   });
 
   if (
-    response.status !== 200
-    || response.errors.length
+    response.errors.length
   ) throw new Error('Erro de comunicação, aguarde um momento ou revise suas credencias.');
 
-  setLeagues(response.response);
+  store.dispatch(setLeagues(response.response));
 }
 
 export const fetchTeams = async () => {
@@ -138,11 +137,10 @@ export const fetchTeams = async () => {
   });
 
   if (
-    response.status !== 200
-    || response.errors.length
+    response.errors.length
   ) throw new Error('Erro de comunicação, aguarde um momento ou revise suas credencias.');
 
-  setList(response.response);
+  store.dispatch(setList(response.response));
 }
 
 export const fetchTeamDetails = async () => {
@@ -160,8 +158,7 @@ export const fetchTeamDetails = async () => {
   });
 
   if (
-    playersResponse.status !== 200
-    || playersResponse.errors.length
+    playersResponse.errors.length
   ) throw new Error('Erro de comunicação, aguarde um momento ou revise suas credencias.');
 
   const players: IPlayer[] = playersResponse.response;
@@ -174,7 +171,7 @@ export const fetchTeamDetails = async () => {
     }
   });
 
-  addStats({
+  store.dispatch(addStats({
     teamId: team.team.id,
     name: team.team.name,
     season: season,
@@ -198,7 +195,7 @@ export const fetchTeamDetails = async () => {
       }, [{ formation: '', played: 0 }]),
     fixtures: teamStats.response.fixtures,
     goals: teamStats.response.goals,
-  })
+  }));
 }
 interface IPlayer {
   player: {
