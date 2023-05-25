@@ -1,6 +1,7 @@
 import { Table } from 'react-bootstrap'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../store';
+import translator from '../../helpers/translator.json'
 
 const PlayersTable = () => {
   const { team } = useSelector((state: RootState) => state.filters);
@@ -21,7 +22,7 @@ const PlayersTable = () => {
             <td>{i + 1}</td>
             <td>{p.name}</td>
             <td>{p.age}</td>
-            <td>{p.nationality}</td>
+            <td>{translator.nationalities[p.nationality] || p.nationality}</td>
           </tr>
         ))}
       </tbody>

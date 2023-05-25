@@ -5,6 +5,8 @@ import { fetchTeamDetails } from '../../api';
 import { Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import PlayersTable from '../components/PlayersTable';
+import TeamScores from '../components/TeamScores';
+import GoalsChart from '../components/GoalsChart';
 
 function Results() {
   const filters = useSelector((state: RootState) => state.filters);
@@ -31,9 +33,15 @@ function Results() {
         <h3>JOGADORES:</h3>
         <PlayersTable />
       </Container>
-      {/* <Container>
+      <Container>
+        <h3>FORMAÇÃO(ÕES) MAIS UTILIZADA(S):</h3>
+        <p>{statistics?.lineUp.map(f => f.formation)}</p>
+        <p>utilizada {statistics?.lineUp[0].played} vezes</p>
+      </Container>
+      <Container>
+        <h3>RESULTADOS:</h3>
         <TeamScores />
-      </Container> */}
+      </Container>
       {/* <Container>
         <GoalsChart />
       </Container> */}
