@@ -66,7 +66,7 @@ interface IPlayer {
     nationality: string;
 }
 
-interface ITeamStats {
+export interface ITeamStats {
     teamId: number;
     name: string;
     season: number;
