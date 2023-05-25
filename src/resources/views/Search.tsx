@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 import { Container, Button } from "react-bootstrap";
-import { useStore } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from '../../store';
 import SelectInput from "../components/SelectInput";
 import {
@@ -14,82 +15,119 @@ import {
   setTeam
 } from "../../store/slices/filters";
 import { useNavigate } from 'react-router-dom'
+import { fetchLeagues, fetchTeams } from "../../api";
+import store from "../../store";
 
 function Search() {
-  const store = useStore<RootState>();
-  const state = store.getState();
   const redirect = useNavigate();
+
+  const filters = useSelector((state: RootState) => state.filters);
+  const { country, season, league, team } = filters;
+  const countriesOPT = useSelector((state: RootState) => state.countries.list.map(c => c.name));
+  const seasonsOPT = useSelector((state: RootState) => state.seasons.years);
+  const leagueOPT = useSelector((state: RootState) => {
+    return state.leagues.list.filter(l => l.country.name === country).map(l => l.league.name)
+  });
+  const teamOPT = useSelector((state: RootState) => {
+    return state.teams.list.filter(t => t.team.country === country).map(t => t.team.name);
+  });
+  const userKey = useSelector((state: RootState) => state.user.key);
+
+  useEffect(() => {
+    if (userKey === '' || userKey === undefined) redirect('/');
+  }, [userKey]);
+
+  useEffect(() => {
+    if (
+      country && country.length
+      && season && season > 0
+      && !team
+      && !leagueOPT.length
+    ) {
+      fetchLeagues();
+    }
+    else if (
+      country && country.length
+      && season && season > 0
+      && league && league.length
+      && !teamOPT.length
+    ) {
+      fetchTeams()
+    }
+  }, [country, season, league, team, leagueOPT, teamOPT]);
 
   return (
     <>
       <Container>
         <SelectInput
           field="country"
-          options={state.countries.list.length ? state.countries.list.map(c => c.name) : ['Por favor, aguarde...']}
+          options={countriesOPT}
           disabled={false}
           onChange={(value: string|undefined|number) => {
-            if (value === undefined) clearCountry();
-            else if (typeof value === 'string') setCountry(value);
+            if (value === undefined) store.dispatch(clearCountry());
+            else store.dispatch(setCountry(value as string));
           }}
         />
       </Container>
-
+  
       <Container>
         <SelectInput
           field="season"
-          options={state.seasons.years.length ? state.seasons.years : ['Por favor, aguarde...']}
-          disabled={state.filters.country === undefined}
+          options={seasonsOPT}
+          disabled={country === undefined}
           onChange={(value: string|undefined|number) => {
-            if (value === undefined) clearSeason();
-            else if (typeof value === 'number') setSeason(value);
+            if (value === undefined) store.dispatch(clearSeason());
+            else store.dispatch(setSeason(value as number));
           }}
         />
       </Container>
       <Container>
         <SelectInput
           field="league"
-          options={state.leagues.list.length
-            ? state.leagues.list.filter(
-              l => l.country.name === state.filters.country
-            ).map(l => l.league.name) : ['Por favor, aguarde...']}
-          disabled={state.filters.season === undefined || state.filters.country === undefined}
+          options={leagueOPT}
+          disabled={season === undefined || country === undefined}
           onChange={(value: string|undefined|number) => {
-            if (value === undefined) clearLeague();
-            else if (typeof value === 'string') setLeague(value);
+            if (value === undefined) store.dispatch(clearLeague());
+            else store.dispatch(setLeague(value as string));
           }}
         />
       </Container>
       <Container>
         <SelectInput
           field="team"
-          options={state.teams.stats.length
-            ? state.teams.stats.filter(
-              t => t.league === state.filters.league
-              && state.filters.season === t.season
-            ).map(t => t.name) : ['Por favor, aguarde...']}
+          options={teamOPT}
           disabled={
-            state.filters.league === undefined
-            || state.filters.season === undefined
-            || state.filters.country === undefined
+            league === undefined
+              || season === undefined
+              || country === undefined
           }
           onChange={(value: string|undefined|number) => {
-            if (value === undefined) clearTeam();
-            else if (typeof value === 'string') setTeam(value);
+            if (value === undefined) store.dispatch(clearTeam());
+            else store.dispatch(setTeam(value as string));
           }}
         />
       </Container>
       <Button
-        onClick={() => {
-          // make request
-          clearFilters();
-          redirect('/results');
-
+        onClick={async () => {
+          if (country && season && league && team) {
+            redirect('/results');
+          }
         }}
         variant="secondary"
         size="sm"
-        className="mt-3"
+        className="m-3"
       >
-        BUSCAR TIME
+            BUSCAR TIME
+      </Button>
+      <Button
+        variant="secondary"
+        size="sm"
+        className="m-3"
+        onClick={() => {
+          store.dispatch(clearFilters());
+        }}
+      >
+            LIMPAR FILTROS
       </Button>
     </>
   );
