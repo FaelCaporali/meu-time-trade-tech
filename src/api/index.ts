@@ -43,6 +43,12 @@ const checkTeam = () => {
   return team;
 }
 
+const checkStats = () => {
+  const stats = store.getState().teams.stats.find(t => t.name === checkTeam().team.name);
+  if (!stats) return false;
+  return true;
+} 
+
 export const fetchUserStatus = async (key: string) => {
   const response = await fetcher({
     url: `https://v3.football.api-sports.io/status`,
@@ -148,147 +154,56 @@ export const fetchTeamDetails = async () => {
   const season = checkSeason();
   const league = checkLeague();  
   const team = checkTeam();
+  const stats = checkStats();
 
-  const playersResponse = await fetcher({
-    url: `https://v3.football.api-sports.io/players?&season=${season}&league=${league}&team=${team.team.id}`,
-    headers: {
-      'x-apisports-key': key,
-      'x-rapidapi-host': 'v3.football.api-sports.io'
+  if (!stats) {
+
+    const playersResponse = await fetcher({
+      url: `https://v3.football.api-sports.io/players?&season=${season}&league=${league}&team=${team.team.id}`,
+      headers: {
+        'x-apisports-key': key,
+        'x-rapidapi-host': 'v3.football.api-sports.io'
+      }
+    });
+  
+    if (
+      playersResponse.errors.length
+    ) throw new Error('Erro de comunicação, aguarde um momento ou revise suas credencias.');
+      
+    const players: IPlayer[] = playersResponse.response;
+    
+    if (playersResponse.paging.total > 1) {
+      for (let i = 2; i <= playersResponse.paging.total; i++) {
+        const morePlayers = await fetcher({
+          url: `https://v3.football.api-sports.io/players?&season=${season}&league=${league}&team=${team.team.id}&page=${i}`,
+          headers: {
+            'x-apisports-key': key,
+            'x-rapidapi-host': 'v3.football.api-sports.io'
+          }
+        });
+
+        players.push(...morePlayers.response);
+      }
     }
-  });
-
-  if (
-    playersResponse.errors.length
-  ) throw new Error('Erro de comunicação, aguarde um momento ou revise suas credencias.');
-
-  const players: IPlayer[] = playersResponse.response;
-
-  const teamStats = await fetcher({
-    url: `https://v3.football.api-sports.io/teams/statistics?&season=${season}&league=${league}&team=${team.team.id}`,
-    headers: {
-      'x-apisports-key': key,
-      'x-rapidapi-host': 'v3.football.api-sports.io'
-    }
-  });
-
-  store.dispatch(addStats({
-    teamId: team.team.id,
-    name: team.team.name,
-    season: season,
-    league: league || 0,
-    players: players.map(p => ({
-      id: p.player.id,
-      name: p.player.name,
-      age: p.player.age,
-      nationality: p.player.nationality,
-    })),
-    lineUp: teamStats.response.lineups.reduce(
-      (most: { formation: string; played: number }[], lineup: { formation: string; played: number }) => {
-        if (most[0].played < lineup.played) {
-          return [lineup];
-        }
-        if (most[0].played === lineup.played) {
-          most.push(lineup);
-          return most;
-        }
-        return most;
-      }, [{ formation: '', played: 0 }]),
-    fixtures: teamStats.response.fixtures,
-    goals: teamStats.response.goals,
-  }));
-}
-interface IPlayer {
-  player: {
-    id:number;
-    name: string;
-    firstname: string;
-    lastname: string;
-    age: number;
-    birth: {
-      date: string;
-      place: string|null;
-      country: string;
-    };
-    nationality: string;
-    height: string;
-    weight: string;
-    injured: boolean;
-    photo: string;
-  };
-  statistics: IPlayerStats[];
-}
-
-interface IPlayerStats {
-  team: {
-    id: number;
-    name: string;
-    logo: string;
-  };
-  league: {
-    id: number;
-    name: string;
-    country: string;
-    logo: string;
-    flag: string;
-    season: number;
-  };
-  games: {
-    appearences: number;
-    lineups: number;
-    minutes: number;
-    number: null|number;
-    position: string;
-    rating: null|string;
-    captain: boolean;
-  };
-  substitutes: {
-    in: number;
-    out: number;
-    bench: number;
-  };
-  shots: {
-    total: number|null;
-    on: number|null;
-  };
-  goals: {
-    total: number;
-    conceded: number;
-    assists: number|null;
-    saves: number|null;
-  };
-  passes: {
-    total: number|null;
-    key: number|null;
-    accuracy: null|number;
-  };
-  tackles: {
-    total: null|number;
-    blocks: null|number;
-    interceptions: null|number;
-  };
-  duels: {
-    total: null|number;
-    won: null|number;
-  };
-  dribbles: {
-    attempts: null|number;
-    success: null|number;
-    past: null|number;
-  };
-  fouls: {
-    drawn: null|number;
-    committed: null|number;
-  };
-  cards: {
-    yellow: number|null;
-    yellowred: number|null;
-    red: number|null;
-  };
-  penalty: {
-    won: null|number;
-    commited: null|number;
-    scored: null|number;
-    missed: null|number;
-    saved: null|number;
-  };
+  
+    const teamStats = await fetcher({
+      url: `https://v3.football.api-sports.io/teams/statistics?&season=${season}&league=${league}&team=${team.team.id}`,
+      headers: {
+        'x-apisports-key': key,
+        'x-rapidapi-host': 'v3.football.api-sports.io'
+      }
+    });
+  
+    store.dispatch(addStats({
+      teamId: team.team.id,
+      name: team.team.name,
+      season: season,
+      league: league || 0,
+      players: players,
+      lineUp: teamStats.response.lineups,
+      fixtures: teamStats.response.fixtures,
+      goals: teamStats.response.goals,
+      holeStatsResponse: teamStats,
+    }));
+  }
 }
