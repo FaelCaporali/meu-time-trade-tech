@@ -1,11 +1,8 @@
 import { Table } from 'react-bootstrap'
-import { useSelector } from 'react-redux'
-import { RootState } from '../../store';
+import { ITeamStats } from '../../store/slices/teams'
 import translator from '../../helpers/translator.json'
 
-const PlayersTable = () => {
-  const { team } = useSelector((state: RootState) => state.filters);
-  const stats = useSelector((state: RootState) => state.teams.stats).find(t => t.name === team);
+const PlayersTable = ({ stats }: { stats: ITeamStats }) => {
   return (
     <Table striped bordered hover>
       <thead>
@@ -18,11 +15,11 @@ const PlayersTable = () => {
       </thead>
       <tbody>
         {stats?.players.map((p, i) => (
-          <tr>
+          <tr key={`player-row${p.player.id}`}>
             <td>{i + 1}</td>
-            <td>{p.name}</td>
-            <td>{p.age}</td>
-            <td>{translator.nationalities[p.nationality] || p.nationality}</td>
+            <td>{p.player.name}</td>
+            <td>{p.player.age}</td>
+            <td>{translator.nationalities[p.player.nationality] || p.player.nationality}</td>
           </tr>
         ))}
       </tbody>
