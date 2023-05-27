@@ -37,14 +37,14 @@ function Results() {
 
   useEffect(() => {
     setLoading(true);
-    if (canFetch) {
+    if (canFetch && !stats) {
       const doTheFetch = async () => { await fetchTeamDetails() };
       doTheFetch().then(() => {
         setFetch(false);
       });
     }
     setLoading(false);
-  }, [canFetch]);
+  }, [canFetch, stats]);
   
   useEffect(() => {
     setLoading(true);
@@ -78,11 +78,14 @@ function Results() {
               <h3>JOGADORES:</h3>
               <PlayersTable stats={stats}/>
             </Container>) : <ComponentLoading />}
-            {!mostUsedLineUp ? <ComponentLoading /> : (<Container>
-              <h3>FORMAÇÃO(ÕES) MAIS UTILIZADA(S):</h3>
-              <ul>{mostUsedLineUp.map(f => <li key={`most-used-lineup-${f.formation}`}>{f.formation}</li>)}</ul>
-              <p>Utilizada(s) {mostUsedLineUp[0].played} vezes</p>
-            </Container>)}
+            {mostUsedLineUp.length > 0 && mostUsedLineUp[0].played ? (
+              <Container>
+                <h3>FORMAÇÃO(ÕES) MAIS UTILIZADA(S):</h3>
+                <ul>{mostUsedLineUp.map(f => <li key={`most-used-lineup-${f.formation}`}>{f.formation}</li>)}</ul>
+                <p>Utilizada(s) {mostUsedLineUp[0].played} vezes</p>
+              </Container>): (
+              <ComponentLoading />
+            )}
             {(stats && stats.fixtures) ? (<Container>
               <h3>RESULTADOS:</h3>
               <TeamScores stats={stats}/>
