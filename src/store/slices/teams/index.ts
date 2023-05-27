@@ -21,20 +21,17 @@ interface ITeamInfo {
     image: string;
   };
 }
-interface ITeamsStatsState {
-  list: ITeamInfo[];  
-  stats: ITeamStats[];
-}
-interface IResults {
-    home: number;
-    away: number;
-    total: number;
+
+interface IGoals<T> {
+    home: T;
+    away: T;
+    total: T;
 }
 
-interface IAverageResults {
-    home: string;
-    away: string;
-    total: string;
+interface IResults {
+  total: IGoals<number>;
+  average: IGoals<string>;
+  minute: IMinutesStats;
 }
 
 interface IGoalMinute {
@@ -55,16 +52,9 @@ interface IMinutesStats {
 
 interface IGoalStats {
     for: IResults;
-    average: IAverageResults;
-    minutes: IMinutesStats;
+    against: IResults;
 }
 
-interface IPlayer {
-    id: number;
-    name: string;
-    age: number;
-    nationality: string;
-}
 
 export interface ITeamStats {
     teamId: number;
@@ -83,6 +73,12 @@ export interface ITeamStats {
         loses: IResults;
     };
     goals: IGoalStats;
+    holeStatsResponse: any;
+}
+
+interface ITeamsStatsState {
+  list: ITeamInfo[];  
+  stats: ITeamStats[];
 }
 
 const initialState: ITeamsStatsState = {
