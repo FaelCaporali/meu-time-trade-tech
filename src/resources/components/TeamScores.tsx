@@ -4,9 +4,7 @@ import { Table } from 'react-bootstrap'
 import translator from '../../helpers/translator.json';
 import { ITeamStats } from '../../store/slices/teams';
 
-function TeamScores() {
-  const filters = useSelector((state: RootState) => state.filters);
-  const stats = useSelector((state: RootState) => state.teams.stats).find(t => t.name === filters.team);
+function TeamScores({ stats }: { stats: ITeamStats }) {
 
   return (
     <Table striped bordered hover>
@@ -19,8 +17,8 @@ function TeamScores() {
         </tr>
       </thead>
       <tbody>
-        {Object.entries(((stats as ITeamStats)?.fixtures)).sort(
-          (a, _b) => { if (a[0] === 'total') return 1; else return -1; }
+        {Object.entries(stats.fixtures).sort(
+          (a, _b) => { if (a[0] === 'played') return 1; else return -1; }
         ).map(([key, value]) => (
           <tr key={`fixtures-${key}`}>
             <td>{translator.fixtures[key]}</td>
