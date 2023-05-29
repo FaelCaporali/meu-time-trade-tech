@@ -1,5 +1,5 @@
 import { Table } from 'react-bootstrap'
-import { ITeamStats } from '../../store/slices/teams'
+import { ITeamStats } from '../../types/store/slices/ITeams'
 import translator from '../../helpers/translator.json'
 
 const PlayersTable = ({ stats }: { stats: ITeamStats }) => {

@@ -1,12 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from '../index';
-
-interface IFilters {
-    country: string | undefined;
-    season: number | undefined;
-    league: string | undefined;
-    team: string | undefined;
-}
+import { IFilters } from "../../../types/store/slices/IFilters";
 
 const initialState: IFilters = {
   country: undefined,

@@ -1,8 +1,11 @@
 import React from 'react'
+import { Placeholder } from 'react-bootstrap';
 
 function Loading() {
   return (
-    <div>Global Loading</div>
+    <Placeholder as="p" animation="wave" bg="dark" size="xs">
+      <Placeholder xs={12} />
+    </Placeholder>
   )
 }
 

@@ -1,15 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from '../index';
-
-interface ICountry {
-    name: string;
-    code: string|null;
-    flag: string|null;
-}
-
-interface ICountriesState {
-    list: ICountry[];
-}
+import { ICountry, ICountriesState } from "../../../types/store/slices/ICountries";
 
 const initialState: ICountriesState = {
   list: [],

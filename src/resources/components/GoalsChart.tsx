@@ -9,7 +9,7 @@ import {
   Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import { ITeamStats } from '../../store/slices/teams';
+import { ITeamStats } from '../../types/store/slices/ITeams';
 
 
 function GoalsChart({ stats }: { stats: ITeamStats }) {

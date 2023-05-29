@@ -1,25 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from '../index';
-
-interface IUserState {
-    key: string;
-    status: {
-      account: {
-        firstname: string;
-        lastname: string;
-        email: string;
-      };
-      subscription: {
-        plan: string;
-        end: string;
-        active: boolean;
-      };
-      requests: {
-        current: number;
-        limit_day: number;
-      };
-    };
-}
+import { IUserState } from "../../../types/store/slices/IUser";
 
 const initialState: IUserState = {
   key: "",
