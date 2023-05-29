@@ -5,6 +5,7 @@ import { setSeasons } from "../store/slices/seasons";
 import { setLeagues } from "../store/slices/leagues";
 import { login, logout } from "../store/slices/user";
 import { addStats, setList } from "../store/slices/teams";
+import { addResponse } from "../store/slices/requests";
 
 const checkKey = () => {
   const key = store.getState().user.key;
@@ -58,6 +59,8 @@ export const fetchUserStatus = async (key: string) => {
     }
   });
 
+  store.dispatch(addResponse(response));
+
   if (Object.entries(response.errors).length) {
     store.dispatch(logout());
     throw new Error('credencial inválida');
@@ -83,6 +86,8 @@ export const fetchCountries = async () => {
     }
   });
 
+  store.dispatch(addResponse(response));
+
   if (
     response.errors.length
   ) throw new Error('Erro de comunicação, aguarde um momento ou revise suas credencias.');
@@ -101,11 +106,14 @@ export const fetchSeasons = async () => {
     }
   });
 
+  store.dispatch(addResponse(response));
+
   if (
     response.errors.length
   ) throw new Error('Erro de comunicação, aguarde um momento ou revise suas credencias.');
 
   store.dispatch(setSeasons(response.response));
+
 }
 
 export const fetchLeagues = async () => {
@@ -121,11 +129,14 @@ export const fetchLeagues = async () => {
     }
   });
 
+  store.dispatch(addResponse(response));
+
   if (
     response.errors.length
   ) throw new Error('Erro de comunicação, aguarde um momento ou revise suas credencias.');
 
   store.dispatch(setLeagues(response.response));
+
 }
 
 export const fetchTeams = async () => {
@@ -141,6 +152,8 @@ export const fetchTeams = async () => {
       'x-rapidapi-host': 'v3.football.api-sports.io'
     }
   });
+
+  store.dispatch(addResponse(response));
 
   if (
     response.errors.length
@@ -165,15 +178,17 @@ export const fetchTeamDetails = async () => {
         'x-rapidapi-host': 'v3.football.api-sports.io'
       }
     });
+
+    store.dispatch(addResponse(playersResponse));
   
     if (
       playersResponse.errors.length
     ) throw new Error('Erro de comunicação, aguarde um momento ou revise suas credencias.');
       
-    const players: IPlayer[] = playersResponse.response;
+    const players: IPlayer[] = [...playersResponse.response];
     
     if (playersResponse.paging.total > 1) {
-      for (let i = 2; i <= playersResponse.paging.total; i++) {
+      for (let i = 2; i < playersResponse.paging.total; i++) {
         const morePlayers = await fetcher({
           url: `https://v3.football.api-sports.io/players?&season=${season}&league=${league}&team=${team.team.id}&page=${i}`,
           headers: {
@@ -182,6 +197,7 @@ export const fetchTeamDetails = async () => {
           }
         });
 
+        store.dispatch(addResponse(morePlayers));
         players.push(...morePlayers.response);
       }
     }
@@ -193,6 +209,8 @@ export const fetchTeamDetails = async () => {
         'x-rapidapi-host': 'v3.football.api-sports.io'
       }
     });
+
+    store.dispatch(addResponse(teamStats));
   
     store.dispatch(addStats({
       teamId: team.team.id,
@@ -203,7 +221,6 @@ export const fetchTeamDetails = async () => {
       lineUp: teamStats.response.lineups,
       fixtures: teamStats.response.fixtures,
       goals: teamStats.response.goals,
-      holeStatsResponse: teamStats,
     }));
   }
 }
