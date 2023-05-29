@@ -5,6 +5,7 @@ import leagues from './leagues';
 import seasons from './seasons';
 import teams from './teams';
 import filters from './filters';
+import responses from './requests';
 
 const rootReducer = combineReducers({
   user,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   leagues,
   teams,
   filters,
+  responses,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

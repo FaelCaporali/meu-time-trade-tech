@@ -3,7 +3,7 @@ import { fetchCountries, fetchSeasons } from '../../api'
 import { useNavigate } from 'react-router-dom';
 import { Alert } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../store';
+import { RootState } from '../../store/slices';
 
 function StateInflator({children}: { children: ReactElement }) {
   const key = useSelector((state: RootState) => {

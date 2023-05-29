@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
-import { RootState } from '../../store';
+import { RootState } from '../../store/slices';
 import { fetchTeamDetails } from '../../api';
 import { Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import PlayersTable from '../components/PlayersTable';
 import TeamScores from '../components/TeamScores';
 import GoalsChart from '../components/GoalsChart';
-import { ITeamStats } from '../../store/slices/teams';
 import GlobalLoading from '../components/GlobalLoading';
 import ComponentLoading from '../components/ComponentLoading';
 

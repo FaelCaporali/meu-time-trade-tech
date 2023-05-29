@@ -1,8 +1,6 @@
-import { useSelector } from 'react-redux'
-import { RootState } from '../../store'
 import { Table } from 'react-bootstrap'
 import translator from '../../helpers/translator.json';
-import { ITeamStats } from '../../store/slices/teams';
+import { ITeamStats } from '../../types/store/slices/ITeams';
 
 function TeamScores({ stats }: { stats: ITeamStats }) {
 

@@ -1,9 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from '../index';
-
-interface ISeasonsState {
-    years: number[];
-}
+import { ISeasonsState } from "../../../types/store/slices/ISeason";
 
 const initialState: ISeasonsState = {
   years: [],
