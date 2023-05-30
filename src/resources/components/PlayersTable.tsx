@@ -1,6 +1,7 @@
 import { Table } from 'react-bootstrap'
 import { ITeamStats } from '../../types/store/slices/ITeams'
 import translator from '../../helpers/translator.json'
+import { ITranslator } from '../../types/helpers/ITranslator'
 
 const PlayersTable = ({ stats }: { stats: ITeamStats }) => {
   return (
@@ -19,7 +20,7 @@ const PlayersTable = ({ stats }: { stats: ITeamStats }) => {
             <td>{i + 1}</td>
             <td>{p.player.name}</td>
             <td>{p.player.age}</td>
-            <td>{translator.nationalities[p.player.nationality] || p.player.nationality}</td>
+            <td>{(translator.nationalities as ITranslator)[p.player.nationality] || p.player.nationality}</td>
           </tr>
         ))}
       </tbody>
