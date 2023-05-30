@@ -9,7 +9,8 @@
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint src --ext ts,tsx --fix --max-warnings 0",
     "preview": "vite preview",
-    "test": "jest "
+    "test": "jest ",
+    "test:log": "jest --verbose --ci --reporters=default --reporters='@matteoh2o1999/github-actions-jest-reporter'"
   },
   "dependencies": {
     "@redux-devtools/extension": "^3.2.5",
@@ -27,6 +28,7 @@
     "redux-thunk": "^2.4.2"
   },
   "devDependencies": {
+    "@matteoh2o1999/github-actions-jest-reporter": "^2.0.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
