@@ -116,6 +116,7 @@ function Search() {
         variant="secondary"
         size="sm"
         className="m-3"
+        disabled={!country || !season || !league || !team}
       >
             BUSCAR TIME
       </Button>
