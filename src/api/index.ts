@@ -7,25 +7,25 @@ import { login, logout } from "../store/slices/user";
 import { addStats, setList } from "../store/slices/teams";
 import { addResponse } from "../store/slices/requests";
 
-const checkKey = () => {
+export const checkKey = () => {
   const key = store.getState().user.key;
   if (!key.length) throw new Error('Forneça credenciais.');
   return key;
 }
 
-const checkCountry = () => {
+export const checkCountry = () => {
   const country = store.getState().filters.country;
   if (!country) throw new Error('Selecione um país.');
   return country;
 }
 
-const checkSeason = () => {
+export const checkSeason = () => {
   const season = store.getState().filters.season;
   if (!season) throw new Error('Selecione o ano.');
   return season;
 }
 
-const checkLeague = () => {
+export const checkLeague = () => {
   const leagueName = store.getState().filters.league;
   if (!leagueName) throw new Error('Selecione o campeonato.');
   const league = store.getState().leagues.list.find((league) => league.league.name === leagueName)?.league.id;
@@ -33,7 +33,7 @@ const checkLeague = () => {
   return league;
 }
 
-const checkTeam = () => {
+export const checkTeam = () => {
   const teamName = store.getState().filters.team;
   if (!teamName) throw new Error('Selecione um time.');
 
@@ -44,7 +44,7 @@ const checkTeam = () => {
   return team;
 }
 
-const checkStats = () => {
+export const checkStats = () => {
   const stats = store.getState().teams.stats.find(t => t.name === checkTeam().team.name);
   if (!stats) return false;
   return true;
@@ -188,7 +188,7 @@ export const fetchTeamDetails = async () => {
     const players: IPlayer[] = [...playersResponse.response];
     
     if (playersResponse.paging.total > 1) {
-      for (let i = 2; i < playersResponse.paging.total; i++) {
+      for (let i = 2; i <= playersResponse.paging.total; i++) {
         const morePlayers = await fetcher({
           url: `https://v3.football.api-sports.io/players?&season=${season}&league=${league}&team=${team.team.id}&page=${i}`,
           headers: {
