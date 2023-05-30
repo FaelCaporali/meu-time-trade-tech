@@ -78,7 +78,7 @@ describe('Testes da tela de busca', () => {
       expect(team).not.toBeDisabled();
       expect(submitBtn).toBeDisabled();
 
-      await userEvent.selectOptions(team, 'Atlético Mineiro');
+      await userEvent.selectOptions(team, 'Atletico-MG');
 
       expect(submitBtn).not.toBeDisabled();
     });
