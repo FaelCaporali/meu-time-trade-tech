@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Container, Button } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import { RootState } from '../../store';
+import { RootState } from "../../types/store";
 import SelectInput from "../components/SelectInput";
 import {
   clearCountry,
