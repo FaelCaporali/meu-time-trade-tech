@@ -15,7 +15,7 @@ export function renderWithRouterAndStore(
 ) {
   const { initialState, route = '/' } = options;
 
-  const store = configureStore({ reducer: rootReducer, preloadedState: initialState });
+  const store = configureStore({ reducer: rootReducer, preloadedState: { ...initialState, user: { key: 'any' } } });
 
   const renderedComponent = render(
     <Provider store={store}>

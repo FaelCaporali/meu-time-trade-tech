@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Container, Button } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import { RootState } from '../../store';
+import { RootState } from "../../types/store";
 import SelectInput from "../components/SelectInput";
 import {
   clearCountry,
@@ -116,6 +116,7 @@ function Search() {
         variant="secondary"
         size="sm"
         className="m-3"
+        disabled={!country || !season || !league || !team}
       >
             BUSCAR TIME
       </Button>

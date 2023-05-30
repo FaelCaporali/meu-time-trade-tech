@@ -1,6 +1,7 @@
 import { Table } from 'react-bootstrap'
 import translator from '../../helpers/translator.json';
 import { ITeamStats } from '../../types/store/slices/ITeams';
+import { ITranslator } from '../../types/helpers/ITranslator';
 
 function TeamScores({ stats }: { stats: ITeamStats }) {
 
@@ -19,7 +20,7 @@ function TeamScores({ stats }: { stats: ITeamStats }) {
           (a, _b) => { if (a[0] === 'played') return 1; else return -1; }
         ).map(([key, value]) => (
           <tr key={`fixtures-${key}`}>
-            <td>{translator.fixtures[key]}</td>
+            <td>{(translator.fixtures as ITranslator)[key]}</td>
             <td>{value.home}</td>
             <td>{value.away}</td>
             <td>{value.total}</td>
