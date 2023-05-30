@@ -1,7 +1,6 @@
-const devKey = process.env.DEV ? process.env.VITE_API_SPORTS_KEY : '';
 const basicEndpoint = 'status';
 
-export default function footballConfig (endpoint: string = basicEndpoint, key: string = devKey) {
+export default function footballConfig (endpoint: string = basicEndpoint, key: string) {
   return {
     url: `https://v3.football.api-sports.io/${endpoint}`,
     headers: {
